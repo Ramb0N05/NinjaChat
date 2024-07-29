@@ -1,0 +1,49 @@
+@media only screen and (max-width : 992px) {
+	nav {
+		height: 60px !important;
+	}
+	
+	#logo-icon {
+		padding-left: 60px !important;
+	}
+	
+	#chat {
+		padding-left: 0 !important;
+	}
+	
+	#chat-header {
+		padding-top: 0 !important;
+	}
+	
+	#chat-header .card-image i {
+		font-size: 48px !important;
+	}
+	
+	#chat-header .card-title {
+		font-size: 20px !important;
+	}
+	
+	#chat-header .user-tag .badge {
+		font-size: 10px !important;
+	}
+	
+	#chat-footer {
+		padding-bottom: 0 !important;
+	}
+	
+	.brand-logo {
+		left: initial !important;
+		-webkit-transform : initial !important;
+		transform : initial !important;
+	}
+	
+	.sidenav {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: calc(100% - 60px) !important;
+	}
+	
+	.fill-container {
+		height: calc(100% - 60px) !important;
+	}
+}
