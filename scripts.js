@@ -28,8 +28,9 @@ let CERT = false
 $(function () {
   M.AutoInit()
   M.Sidenav.init($('.sidenav'))
-  $('select').formSelect()
-  $('input[type="range"]').range()
+  M.FormSelect.init($('select'))
+  M.Range.init($('input[type="range"]'))
+  M.Modal.init($('#session-add-modal'))
 
   const ttlist = new TrimmedTextList('#chat-body .card-panel:last-child > pre', true, textMaxLength)
 
@@ -152,7 +153,12 @@ $(function () {
   })
 
   $('#main-fab a').on('click', function () {
-    M.Modal.getInstance($('#session-add-modal')).open()
+	let mI = M.Modal.getInstance($('#session-add-modal'))
+	
+	if (mI != undefined)
+		mI.open()
+	else
+		$('#session-add-modal').modal('open')
   })
 
   $('#session-join-btn').on('click', function () {
